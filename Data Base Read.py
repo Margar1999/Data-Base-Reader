@@ -12,9 +12,9 @@ class Main(Tk):
 
     def db_connect(self):
         try:
-            dbconnect = sqlite3.connect(str(self.entry_1.get())) # C:\Users\marko\Desktop\new.db
+            dbconnect = sqlite3.connect(str(self.entry_1.get())) 
             cursors = dbconnect.cursor()
-            cursors.execute(str(self.entry_2.get()))                 # SELECT * FROM Trainings WHERE training_id = 1;
+            cursors.execute(str(self.entry_2.get()))         
             aadsd = cursors.fetchall()
             for i in aadsd:
                 Label(screen, text=i, bg="red").grid()
@@ -54,15 +54,3 @@ screen.screen_label(window=screen)
 screen.screen_entry(window=screen)
 screen.screen_button(window=screen)
 screen.mainloop_f(main_screen=screen)
-
-
-
-
-
-
-
-
-
-
-
-
